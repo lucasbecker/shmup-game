@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header, footer{
+  text-align: center;
+  margin: 25px 0;
+}
+
+#game{
+  height: 600px;
+  width: 600px;
+  background-color: black;
+  border-radius: 5px;
+
+  position: relative;
+}
+
+#instructions{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+#start{
+  margin-top: 25px;
+  width: 150px;
+  padding: 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+
+  background-color: #16C60C;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+  transition: background .2s ease;
+}
+
+#start:hover{
+  background-color: #11a309;
+}
+
+#player{
+  position: absolute;
+  left: 20px;
+  top: 250px;
+  
+  height: 50px;
+  width: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 51px;
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.laser{
+  position: absolute;
+
+  height: 50px;
+  width: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: rotate(223deg);
+
+  font-size: 25px;
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.enemy{
+  position: absolute;
+  
+  height: 50px;
+  width: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 30px;
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.enemy-transition{
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.dead-enemy{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+  font-size: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
